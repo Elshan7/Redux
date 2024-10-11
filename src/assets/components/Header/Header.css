@@ -1,0 +1,157 @@
+header {
+    width: 100%;
+    height: 180px;
+    background-color: yellow;
+}
+
+.header-top {
+    width: 100%;
+    height: 40.67px;
+    border-bottom: 1px solid #edeff2;
+    background: #FFFFFF;
+    font-family: "Jost", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-top-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-top-left {
+    width: 272px;
+    height: 24px;
+}
+
+.left-ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-ul li a {
+    color: #292621;
+    font-size: 14px;
+}
+
+.header-top-right {
+    width: 377px;
+    height: 24px;
+    display: flex;
+}
+
+.order-list {
+    width: 219.49px;
+    height: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-list li a {
+    color: #292621;
+    font-size: 14px;
+}
+
+.first-li {
+    width: 83.73px;
+    border-right: 1px solid #edeff2;
+}
+
+.second-li {
+    width: 115.96px;
+    border-right: 1px solid #edeff2;
+}
+
+.header-social {
+    width: 157.46px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.icon {
+    color: #74706B;
+    font-size: 14px;
+}
+
+.header-mid {
+    width: 100%;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+.header-mid-container {
+    width: 90%;
+    height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 203px;
+}
+
+nav {
+    width: 711px;
+    height: 92px;
+}
+
+.mid-ul {
+    height: 92px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mid-ul li a {
+    font-size: 16px;
+    font-family: "Jost", sans-serif;
+    color: #141517;
+    font-weight: 600;
+}
+
+.header-mid-right {
+    width: 150px;
+    height: 36.67px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mid-i {
+    color: #292621;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header-bottom {
+    height: 47.59px;
+    width: 100%;
+    background-color: #16161a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Jost",sans-serif;
+
+}
+
+.span-p {
+    color: #CEBD9C !important;
+    font-weight: 500;
+    border-bottom:2px solid #CEBD9C;
+}
