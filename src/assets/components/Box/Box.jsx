@@ -48,11 +48,12 @@ export default function Box({item}) {
   };
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
+
+    <Card className='main-card' sx={{ maxWidth: 345 }}>
+      <CardHeader className='card-header'
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
+          <Avatar className='avatar' sx={{ bgcolor: red[500] }} aria-label="recipe">
+            {item.rating.rate}
           </Avatar>
         }
         action={
@@ -60,21 +61,21 @@ export default function Box({item}) {
             <MoreVertIcon />
           </IconButton>
         }
-        title={item.title}
+        title={item.category}
         subheader="September 14, 2016"
       />
-      <CardMedia
+      <CardMedia className='cards-media'
         component="img"
-        height="194"
+        height="200"
         image={item.image}
         alt="Paella dish"
       />
       <CardContent>
-        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+        <Typography className='card-typo' variant="body2" sx={{ color: 'text.secondary' }}>
         {item.description}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      <CardActions className='card-action' disableSpacing>
         <IconButton aria-label="add to favorites">
           <FavoriteIcon />
         </IconButton>
@@ -100,11 +101,7 @@ export default function Box({item}) {
           <Typography sx={{ marginBottom: 2 }}>
             Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over
             medium-high heat. Add chicken, shrimp and chorizo, and cook, stirring
-            occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to a
-            large plate and set aside, leaving chicken and chorizo in the pan. Add
-            pimentón, bay leaves, garlic, tomatoes, onion, salt and pepper, and cook,
-            stirring often until thickened and fragrant, about 10 minutes. Add
-            saffron broth and remaining 4 1/2 cups chicken broth; bring to a boil.
+            occasionally until lightly browned, 6 to 8 minutes. 
           </Typography>
           <Typography sx={{ marginBottom: 2 }}>
             Add rice and stir very gently to distribute. Top with artichokes and
