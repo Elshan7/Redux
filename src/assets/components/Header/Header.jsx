@@ -4,8 +4,11 @@ import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter, FaYoutube } from "rea
 import { IoSearchOutline } from 'react-icons/io5';
 import { LuUser2 } from 'react-icons/lu';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+    const navigate = useNavigate();
+
   return (
     <header>
 
@@ -42,8 +45,8 @@ const Header = () => {
 
         <div className="header-mid">
             <div className="header-mid-container">
-                <div className="logo">
-                    <img src="https://preview.colorlib.com/theme/capitalshop/assets/img/logo/logo.png.webp" alt="" />
+                <div className="logo" >
+                    <img onClick={() => navigate("/")} src="https://preview.colorlib.com/theme/capitalshop/assets/img/logo/logo.png.webp" alt="" />
                 </div>
                 <nav>
                     <ul className='mid-ul'>
@@ -60,7 +63,7 @@ const Header = () => {
                 <div className="header-mid-right">
                 <IoSearchOutline className='mid-i' />
                 <LuUser2 className='mid-i' />
-                <HiOutlineShoppingCart className='mid-i' />
+                <HiOutlineShoppingCart onClick={() => navigate('/basket')} className='mid-i' />
 
                 </div>
 

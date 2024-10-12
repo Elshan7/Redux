@@ -11,9 +11,11 @@ import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { MdDelete } from "react-icons/md";
+import { MdBookmarkAdded } from "react-icons/md";
+import { addToBasket, deleteFromBasket } from '../../redux/feature/basket/basketSlice';
+import { useDispatch } from 'react-redux';
 
 
 const ExpandMore  = styled((props) => {
@@ -42,10 +44,20 @@ const ExpandMore  = styled((props) => {
 
 export default function Box({item}) {
   const [expanded, setExpanded] = React.useState(false);
+  const dispatch = useDispatch();
 
   const handleExpandClick  = () => {
     setExpanded(!expanded);
   };
+
+  const handleAddToBasket = () => {
+    dispatch (addToBasket(item));
+  };
+
+  const handleRemove = () => {
+    dispatch(deleteFromBasket(item));
+  };
+
 
   return (
 
@@ -58,7 +70,7 @@ export default function Box({item}) {
         }
         action={
           <IconButton aria-label="settings">
-            <MoreVertIcon />
+            <MdBookmarkAdded onClick= {handleAddToBasket} />
           </IconButton>
         }
         title={item.category}
@@ -80,7 +92,8 @@ export default function Box({item}) {
           <FavoriteIcon />
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+        <MdDelete onClick={handleRemove} />
+          
         </IconButton>
         <ExpandMore
           expand={expanded}

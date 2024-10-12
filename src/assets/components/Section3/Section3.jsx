@@ -9,7 +9,7 @@ const Section3 = () => {
     const dispatch = useDispatch();
     const {value} = useSelector((state) => state.product);
 
-    console.log(value);
+    
 
     useEffect(() => {
         dispatch(getProduct());
