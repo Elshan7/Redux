@@ -10,6 +10,7 @@ import Home from './assets/components/Home/Home';
 import WishList from './assets/components/wishList';
 import Login from './assets/components/Login/Login';
 import SignUp from './assets/components/SignUp/SignUp';
+import Welcome from './assets/components/Welcome';
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
       <Route exact path='/wishlist' element = {<WishList/>}/>
       <Route exact path='/login' element ={<Login/>}/>
       <Route exact path='/signup' element ={<SignUp/>}/>
+      <Route path="/welcome/:id" element={<Welcome />} />
       </Routes>
     </BrowserRouter>
 

@@ -136,9 +136,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: 1.5rem !important;
   }
   
-  .btn {
+  .btn5 {
       width: 244px;
       height: 48px;
       font-family: Poppins-Medium;
