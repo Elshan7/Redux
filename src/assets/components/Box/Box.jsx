@@ -16,6 +16,7 @@ import { MdDelete } from "react-icons/md";
 import { MdBookmarkAdded } from "react-icons/md";
 import { addToBasket, deleteFromBasket } from '../../redux/feature/basket/basketSlice';
 import { useDispatch } from 'react-redux';
+import { addToWishlist, deleteFromWishlist } from '../../redux/feature/wishlist/wishList';
 
 
 const ExpandMore  = styled((props) => {
@@ -58,6 +59,14 @@ export default function Box({item}) {
     dispatch(deleteFromBasket(item));
   };
 
+  const handleAddToWishlist = () => {
+    dispatch (addToWishlist(item));
+  };
+
+  const removeWishlist = () => {
+    dispatch(deleteFromWishlist(item));
+  };
+
 
   return (
 
@@ -69,8 +78,8 @@ export default function Box({item}) {
           </Avatar>
         }
         action={
-          <IconButton aria-label="settings">
-            <MdBookmarkAdded onClick= {handleAddToBasket} />
+          <IconButton onClick= {handleAddToBasket} aria-label="settings">
+            <MdBookmarkAdded  />
           </IconButton>
         }
         title={item.category}
@@ -88,11 +97,11 @@ export default function Box({item}) {
         </Typography>
       </CardContent>
       <CardActions className='card-action' disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+        <IconButton onClick = {handleAddToWishlist}  aria-label="add to favorites">
+          <FavoriteIcon   />
         </IconButton>
-        <IconButton aria-label="share">
-        <MdDelete onClick={handleRemove} />
+        <IconButton onClick={removeWishlist} aria-label="share">
+        <MdDelete  />
           
         </IconButton>
         <ExpandMore

@@ -5,6 +5,7 @@ import { IoSearchOutline } from 'react-icons/io5';
 import { LuUser2 } from 'react-icons/lu';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { useNavigate } from 'react-router-dom';
+import DropDown from '../DropDown';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -26,7 +27,7 @@ const Header = () => {
 
                 <div className="header-top-right">
                     <ul className="order-list">
-                        <li className='first-li'><a href="">My Wishlist</a></li>
+                        <li className='first-li'><a onClick={() => navigate("/wishlist")} href="">My Wishlist</a></li>
                         <li className='second-li'><a href="">Track Your Order</a></li>
                     </ul>
                     <ul className="header-social">
@@ -62,7 +63,7 @@ const Header = () => {
                 </nav>
                 <div className="header-mid-right">
                 <IoSearchOutline className='mid-i' />
-                <LuUser2 className='mid-i' />
+                <DropDown className = 'dropdown' />
                 <HiOutlineShoppingCart onClick={() => navigate('/basket')} className='mid-i' />
 
                 </div>

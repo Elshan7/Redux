@@ -122,11 +122,11 @@ nav {
 }
 
 .header-mid-right {
-    width: 150px;
-    height: 36.67px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    width: 150px !important;
+    height: 36.67px !important;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
 }
 
 .mid-i {
@@ -142,6 +142,11 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.dropdown {
+    width: 10px !important;
+    height: 10px !important;
 }
 
 .bottom-p{
