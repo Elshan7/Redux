@@ -23,7 +23,7 @@ const Welcome = () => {
     return (
         <div>
             <h1 style={{ textAlign: "center", padding: "1rem" }}>Welcome, {fullname || fullname}</h1>
-            <Link to="/login" >Go Back</Link> 
+            <button onClick={() => navigate("/login")}>Go Back</button>
         </div>
     );
 };

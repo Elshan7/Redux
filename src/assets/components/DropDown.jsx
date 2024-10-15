@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Menu, Button, Text, rem } from '@mantine/core';
 import {
   IconSettings,
@@ -12,7 +12,9 @@ const DropDown = () => {
 
   const navigate = useNavigate();
 
+
   return (
+ 
     <Menu shadow="md" width={130}  >
       <Menu.Target> 
         <Button><LuUser2  className='mid-i' /></Button>

@@ -3,7 +3,6 @@ import "./App.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@mantine/carousel/styles.css';
 import '@mantine/core/styles.css';
-import { useDispatch } from 'react-redux';
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import Basket from './assets/components/Basket';
 import Home from './assets/components/Home/Home';
@@ -11,8 +10,6 @@ import WishList from './assets/components/wishList';
 import Login from './assets/components/Login/Login';
 import SignUp from './assets/components/SignUp/SignUp';
 import Welcome from './assets/components/Welcome';
-
-
 
 
 
@@ -28,7 +25,7 @@ const App = () => {
       <Route exact path='/wishlist' element = {<WishList/>}/>
       <Route exact path='/login' element ={<Login/>}/>
       <Route exact path='/signup' element ={<SignUp/>}/>
-      <Route path="/welcome/:id" element={<Welcome />} />
+      <Route exact path="/welcome/:id" element={<Welcome />} />
       </Routes>
     </BrowserRouter>
 

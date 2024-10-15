@@ -145,8 +145,13 @@ nav {
 }
 
 .dropdown {
-    width: 10px !important;
-    height: 10px !important;
+    width: 16px !important;
+    height: 16px !important;
+}
+
+.m_811560b9 {
+    background-color: white;
+    border: none !important;
 }
 
 .bottom-p{

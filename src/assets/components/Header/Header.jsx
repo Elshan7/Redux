@@ -62,10 +62,9 @@ const Header = () => {
                     
                 </nav>
                 <div className="header-mid-right">
-                <IoSearchOutline className='mid-i' />
+                {/* <IoSearchOutline className='mid-i' /> */}
                 <DropDown className = 'dropdown' />
                 <HiOutlineShoppingCart onClick={() => navigate('/basket')} className='mid-i' />
-
                 </div>
 
             </div>
