@@ -28,7 +28,8 @@ const Card2 = ({item}) => {
 
             <div className="icons-card">
             <button href="#" className="card-button">Learn More</button>
-            <MdDeleteForever className='delete-icon' onClick={handleRemove} />
+            {/* <MdDeleteForever className='delete-icon' onClick={handleRemove} /> */}
+            <button onClick={handleRemove} className='dlt-btn'>Delete</button>
             </div>
         </div>
 

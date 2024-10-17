@@ -3,6 +3,7 @@ import Header from './Header/Header';
 import { useSelector } from 'react-redux';
 import Box from './Box/Box';
 import Card2 from './Card2/Card2';
+import Footer from './Footer/Footer';
 
 const Basket = () => {
  
@@ -18,6 +19,8 @@ const Basket = () => {
       ) : (
         <p>No items in the basket</p>
       )}
+
+      <Footer/>
     </div>
   );
 };

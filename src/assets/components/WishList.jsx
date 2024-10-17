@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header/Header';
 import Box from './Box/Box';
 import { useSelector } from 'react-redux';
+import Footer from './Footer/Footer';
 
 const WishList = () => {
     const wishListItems = useSelector((state) => state.wishlist.items);
@@ -17,6 +18,8 @@ const WishList = () => {
       ) : (
         <p>No items in the basket</p>
       )}
+
+      <Footer/>
       
     </div>
   )
