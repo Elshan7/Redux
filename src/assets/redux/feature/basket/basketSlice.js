@@ -9,8 +9,15 @@ export const basketSlice = createSlice({
   initialState,
   reducers: {
     addToBasket: (state, action) => {
-      state.items.push(action.payload);
-      localStorage.setItem('basket', JSON.stringify(state.items)); 
+      const existItem = state.items.find(item => item.id === action.payload.id);
+
+      if (existItem) {
+        alert("already exist in the wishlist")
+      } else {
+        state.items.push(action.payload);
+        localStorage.setItem('basket', JSON.stringify(state.items)); 
+      }
+     
     },
     deleteFromBasket: (state, action) => {
       state.items = state.items.filter(item => item.id !== action.payload.id);

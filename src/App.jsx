@@ -10,6 +10,7 @@ import WishList from './assets/components/wishList';
 import Login from './assets/components/Login/Login';
 import SignUp from './assets/components/SignUp/SignUp';
 import Welcome from './assets/components/Welcome';
+import Card2 from './assets/components/Card2/Card2';
 
 
 
@@ -26,6 +27,7 @@ const App = () => {
       <Route exact path='/login' element ={<Login/>}/>
       <Route exact path='/signup' element ={<SignUp/>}/>
       <Route exact path="/welcome/:id" element={<Welcome />} />
+      <Route exact path="/card2" element={<Card2 />} />
       </Routes>
     </BrowserRouter>
 

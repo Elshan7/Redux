@@ -17,6 +17,8 @@ import { MdBookmarkAdded } from "react-icons/md";
 import { addToBasket, deleteFromBasket } from '../../redux/feature/basket/basketSlice';
 import { useDispatch } from 'react-redux';
 import { addToWishlist, deleteFromWishlist } from '../../redux/feature/wishlist/wishList';
+import "./Box.css"
+
 
 
 const ExpandMore  = styled((props) => {
@@ -55,9 +57,6 @@ export default function Box({item}) {
     dispatch (addToBasket(item));
   };
 
-  const handleRemove = () => {
-    dispatch(deleteFromBasket(item));
-  };
 
   const handleAddToWishlist = () => {
     dispatch (addToWishlist(item));
@@ -74,12 +73,13 @@ export default function Box({item}) {
       <CardHeader className='card-header'
         avatar={
           <Avatar className='avatar' sx={{ bgcolor: red[500] }} aria-label="recipe">
-            {item.rating.rate}
+            {item.rating.count } $
           </Avatar>
         }
         action={
           <IconButton onClick= {handleAddToBasket} aria-label="settings">
             <MdBookmarkAdded  />
+           
           </IconButton>
         }
         title={item.category}
@@ -100,7 +100,7 @@ export default function Box({item}) {
         <IconButton onClick = {handleAddToWishlist}  aria-label="add to favorites">
           <FavoriteIcon   />
         </IconButton>
-        <IconButton onClick={removeWishlist} aria-label="share">
+        <IconButton onClick={removeWishlist}  aria-label="share">
         <MdDelete  />
           
         </IconButton>
@@ -143,15 +143,4 @@ export default function Box({item}) {
 }
 
 
-// const Box = ({item}) => {
-//   return (
-//     <div className='box' style={{height: '300px', width: '300px'}}>
-//         <img src={item.image} alt="" style={{width:'100%', height:'200px'}} />
-//         <h5>{item.title}</h5>
-//         <p>{item.description}</p>
-      
-//     </div>
-//   )
-// }
 
-// export default Box

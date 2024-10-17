@@ -26,6 +26,7 @@ header {
 .header-top-left {
     width: 272px;
     height: 24px;
+   
 }
 
 .left-ul {
@@ -39,10 +40,11 @@ header {
     font-size: 14px;
 }
 
-.header-top-right {
+header .header-top-right {
     width: 377px;
     height: 24px;
     display: flex;
+
 }
 
 .order-list {
@@ -67,11 +69,12 @@ header {
     border-right: 1px solid #edeff2;
 }
 
-.header-social {
+header .header-social {
     width: 157.46px;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    
 }
 
 .icon {

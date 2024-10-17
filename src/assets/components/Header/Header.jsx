@@ -51,7 +51,7 @@ const Header = () => {
                 </div>
                 <nav>
                     <ul className='mid-ul'>
-                        <li><a href="">Home</a></li>
+                        <li onClick={() => navigate('/')}><a href="">Home</a></li>
                         <li><a href="">Men</a></li>
                         <li><a href="">Women</a></li>
                         <li><a href="">Baby Collection</a></li>
